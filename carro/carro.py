@@ -44,6 +44,7 @@ class Carro:
                     break
         self.guardar_carro()
     
+    
     def limpiar_carro(self):
         self.session["carro"]= {}
         self.modified = True
