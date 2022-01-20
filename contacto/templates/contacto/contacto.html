@@ -1,0 +1,24 @@
+{% extends "projectpp/base.html" %} 
+
+{% load static %} 
+
+{% block content %} 
+
+<div class="contenedorFormulario" style="background-color: rgba(24, 64, 8); margin: 10px auto; border-radius: 5px; padding: 1px 0px; width: 50%; margin: 20px auto;"">
+    {% if "valido" in request.GET %}
+ 
+        <p>Informacion enviada con exito</p>
+    {% endif %}
+    <form action="" method="post" style="text-align: center;">
+    {% csrf_token %}
+        <table style="color: white;" >
+        {{miFormulario.as_table}}
+
+    </table>
+    <input type="submit" value="Enviar" style="width: 150px; padding-top: 4px; margin: 5px 5px;">
+</form>
+</div>
+<p style="color: snow;"> gggg{{request.POST}}  </p>
+  
+
+{% endblock %}

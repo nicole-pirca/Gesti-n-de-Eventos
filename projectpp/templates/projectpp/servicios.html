@@ -1,0 +1,19 @@
+{% extends "projectpp/base.html" %} 
+
+{% load static %} 
+
+{% block content %} 
+
+    {% for servicio in servicios %}
+
+    <div>
+        <p>
+            <h2>{{servicio.titulo}}</h2>
+            <h2>{{servicio.contenido}}</h2>
+            <img src="{{servicio.imagen.url}}" alt="Servicio">
+        </p>
+
+    </div>
+    {% endfor %}
+
+{% endblock %}
